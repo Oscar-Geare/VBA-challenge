@@ -19,4 +19,21 @@ There should also be conditional formatting that will highlight positive change 
 
 Honestly I didn't read the instructions properly to start with so I ended up shoving all the results to a new sheet. Then I realised that if additional data was added to the workbook in new yearly sheets, it wouldn't work properly so I had to exclude the first sheet. Then I realised that if we were adding new data we probably didn't want to process over the old data, so I needed to work out a way to skip that. Then I did that. Then I realised I didn't need to do that. 
 
+The script should do the following:
+* Determine if a summary sheet ("Final_Data") esists.
+* If NO: Create Summary sheet with headers and "Greatest of" table.
+* If YES: Scrape summary sheet for relevant data so that it can ignore sheets that have already been reviewed by the summary. Note: if the sheet has had changes made, but the sheet name has not changed, then the script will assume that no changes have been made.
+* The script then goes through the workbook, compiles the following data points about each Stock and places it on the summary page:
+  * Year (taken from worksheet name)
+  * Total yearly trading volume
+  * The Year opening price
+  * The Year closing price
+  * The year percentage change
+  * The year amount change
+* As it compiles the above data it works out which stock meets the following criteria and places it on the side of the summary page:
+  * Greatest % Increase
+  * Greatest % Decrease
+  * Greatest trading volume
+* Once everything is done, the script determines which stock on which year meets the above criteria of greatest changes and places it at the top of the greatest table on the summary tab. If we wanted to be *really* smart we would get the script to calculate the greatest changes over all data present. But I've made too much work for myself by being smart already, so lets not do that.  
+
 At least it was good experience. 
