@@ -65,8 +65,8 @@ Sub stocktracker()
     ' For this task we're rolling through all worksheets
     For Each ws In Worksheets
 
-        ' Ok look I know I'm nulling these vars multiple times, but if I null the stockTotal I get an overflow error when I'm adding the Totals and I'm tired of troubleshooting
-        ' I probably don't need to null all of these (or any of these) but it's superstition at this point
+' Ok look I know I'm nulling these vars multiple times, but if I dont zero the stockTotal I get an overflow error when I'm adding the Totals and I'm tired of troubleshooting
+' I probably don't need to zero all of these (or any of these) but it's superstition at this point
         tickerCount = 0 ' Set ticker count to 0
         stockTotal = 0 ' Set initial value of stocks to 0
         increasePercent = 0
