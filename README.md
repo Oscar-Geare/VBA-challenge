@@ -24,7 +24,7 @@ The script should do the following:
 * If NO: Create Summary sheet with headers and "Greatest of" table.
 * If YES: Scrape summary sheet for relevant data so that it can ignore sheets that have already been reviewed by the summary. Note: if the sheet has had changes made, but the sheet name has not changed, then the script will assume that no changes have been made.
 * The script then goes through the workbook, compiles the following data points about each Stock and places it on the summary page:
-  * Year (taken from worksheet name)
+  * Year (taken from worksheet name) (or letter, if using alphabetical data)
   * Total yearly trading volume
   * The Year opening price
   * The Year closing price
@@ -35,5 +35,7 @@ The script should do the following:
   * Greatest % Decrease
   * Greatest trading volume
 * Once everything is done, the script determines which stock on which year meets the above criteria of greatest changes and places it at the top of the greatest table on the summary tab. If we wanted to be *really* smart we would get the script to calculate the greatest changes over all data present. But I've made too much work for myself by being smart already, so lets not do that.  
+
+If you copy the 2014 sheet (or if, as per the grading rubic you're using the alphabetical testing, the P tab) and rename it 2013 (or Q tab), and then re-run the script, it should *not* run through the entire workbook, and only create a summary for the data on the new sheet
 
 At least it was good experience. 
